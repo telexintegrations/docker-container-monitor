@@ -27,14 +27,14 @@ async def get_integration_json(request: Request):
                     "description": "Location of hosted docker container (DNS or IP Address)",
                     "type": "text",
                     "required": True,
-                    "default": "",
+                    "default": "34.58.63.29",
                 },
                 {
                     "label": "Container ID",
                     "description": "The ID of container to monitor",
                     "type": "text",
                     "required": True,
-                    "default": "",
+                    "default": "6fecb0bce6a0",
                 },
                 {
                     "label": "interval",
