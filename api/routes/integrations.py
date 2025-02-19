@@ -44,6 +44,7 @@ async def get_integration_json(request: Request):
                 },
             ],
             "tick_url": f"{base_url}/tick",
+            "target_url": "",
             "author": "David Enikuomehin",
         }
     }
