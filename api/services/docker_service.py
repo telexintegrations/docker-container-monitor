@@ -23,7 +23,7 @@ class DockerService:
         except docker.errors.NotFound:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Container with ID {container_id} not found",
+                detail=f"Error: Container with ID {container_id} not found",
             )
         except DockerException as e:
             raise HTTPException(

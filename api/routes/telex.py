@@ -52,7 +52,7 @@ async def monitor_task(payload: MonitorPayload):
 
     except HTTPException as e:
         # Send error webhook
-        await send_webhook(payload.return_url, f"Error: {e.detail}", status="error")
+        await send_webhook(payload.return_url, e.detail, status="error")
 
 
 @router.post("/tick", status_code=status.HTTP_202_ACCEPTED)
