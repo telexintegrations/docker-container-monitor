@@ -69,8 +69,28 @@ The application provides auto-generated API documentation using Swagger UI. You 
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
+
 ## **Testing**
-To test the application, use the following curl command to simulate a monitoring request:
+To test this application, on a Telex organization:
+
+1. **Access the Applications Dashboard**  
+   Go to the Telex Applications Dashboard by navigating to:  
+   [https://telex.im/dashboard/applications](https://telex.im/dashboard/applications).
+
+2. **Add a New Integration**  
+   - Click the **"Add New"** button located in the top-right corner of the page.  
+   - In the popup that appears, provide the link to the `/integration.json` endpoint. e.g, (https://<domain-name.com>/integration.json)
+
+   Your integration will now be set up and ready to use.
+
+3. **Configure Integration Settings**  
+   Once the integration is added, you can customize its behavior in the **Settings** section. The following fields are available for configuration:  
+   - **Interval**: Set a cron-like schedule for sending reminders (e.g., `0 9 * * 1-6` for weekdays at 9:00 AM).  
+   - **Remote Host Address**: Specify the DNS or IP address of the hosted Docker container.  
+   - **Container ID**: Enter the ID of the Docker container you want to monitor.  
+
+
+Alternatively, use the following curl command to simulate a monitoring request locally:
 
 ```bash
 curl --location 'http://localhost:8000/tick' \
